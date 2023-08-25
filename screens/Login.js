@@ -7,8 +7,10 @@ import Icon from "react-native-vector-icons/FontAwesome";
 import { TextInput } from "react-native";
 import { StyleSheet } from "react-native";
 import Button from "../components/Button";
+import { useNavigation } from "@react-navigation/native";
 
 const Login = () => {
+  const navigation = useNavigation();
   return (
     <View style={{ flex: 1, backgroundColor: "#fff", flexDirection: "column" }}>
       <StatusBar barStyle="dark-content" backgroundColor={Colors.primary} />
@@ -123,7 +125,7 @@ const Login = () => {
           <View style={{ marginTop: 50, justifyContent: "center" }}>
             <Button
               btn_text={"Connexion"}
-              on_press={() => console.log("text")}
+              on_press={() => navigation.navigate("Dashboard")}
             />
           </View>
         </View>

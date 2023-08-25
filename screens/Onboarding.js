@@ -64,7 +64,7 @@ const Onboarding = ({ navigation }) => {
         >
           <Button
             on_press={() => navigation.navigate("Login")}
-            btn_text="Get Started"
+            btn_text="Commencer"
           />
         </View>
       </View>
