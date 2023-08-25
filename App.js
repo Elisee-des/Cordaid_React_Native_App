@@ -53,14 +53,9 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        {/* <Stack.Screen name="Splash" component={Splash} />
+        <Stack.Screen name="Splash" component={Splash} />
         <Stack.Screen name="Onboarding" component={Onboarding} />
-        <Stack.Screen name="Login" component={Login} /> */}
-
-        {/* <Stack.Screen name="Backups" component={Backups} /> */}
-        {/* <Stack.Screen name="Producteurs" component={Producteurs} /> */}
-        {/* <Stack.Screen name="Productions" component={Productions} /> */}
-        {/* <Stack.Screen name="SuiteProductions" component={SuiteProductions} /> */}
+        <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Main" component={MainStackScreen} />
       </Stack.Navigator>
     </NavigationContainer>

@@ -125,7 +125,7 @@ const Login = () => {
           <View style={{ marginTop: 50, justifyContent: "center" }}>
             <Button
               btn_text={"Connexion"}
-              on_press={() => navigation.navigate("Dashboard")}
+              on_press={() => navigation.navigate("Main")}
             />
           </View>
         </View>
