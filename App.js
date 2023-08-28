@@ -16,6 +16,7 @@ import {
   SuiteProductions,
   RecolteVentes,
   Dashboard,
+  DetailProducteur,
 } from "./screens";
 import { useFonts } from "expo-font";
 import { Ionicons, Fontisto } from "@expo/vector-icons";
@@ -120,6 +121,9 @@ function MainStackScreen() {
         }}
         component={Producteurs}
       />
+
+      <Drawer.Screen name="Detail producteurs" component={DetailProducteur} />
+      <Drawer.Screen name="Production" component={Productions} />
 
       <Drawer.Screen
         name="Productions"

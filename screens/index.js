@@ -7,3 +7,4 @@ export { default as Productions } from "./MainStackScreen/Productions";
 export { default as SuiteProductions } from "./MainStackScreen/SuiteProductions";
 export { default as RecolteVentes } from "./MainStackScreen/RecolteVentes";
 export { default as Dashboard } from "./MainStackScreen/Dashboard";
+export { default as DetailProducteur } from "./MainStackScreen/DetailProducteur";

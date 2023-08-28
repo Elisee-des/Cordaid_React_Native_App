@@ -5,10 +5,10 @@ const styles = StyleSheet.create({
   container: {
     width: "100%",
     flexDirection: "row",
-    marginTop: 10,
+    marginTop: 5,
     marginBottom: 42,
     backgroundColor: Colors.primary,
-    borderRadius: 5,
+    borderRadius: 20,
     alignItems: "center",
     marginBottom: 10,
     justifyContent: "space-between",
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
 
   buttonText: {
     color: "#fff",
-    fontSize: 24,
+    fontSize: 18,
   },
 
   button: {
