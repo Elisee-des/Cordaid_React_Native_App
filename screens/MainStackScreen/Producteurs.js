@@ -8,8 +8,14 @@ import {
   FlatList,
   TouchableOpacity,
 } from "react-native";
+import { Colors } from "../../constants";
+import { useNavigation } from "@react-navigation/native";
 
-export default Producteurs = () => {
+export default Producteurs = ({ navigation }) => {
+  const handleViewDetails = () => {
+    navigation.navigate("DetailProducteur");
+  };
+
   const data = [
     { id: 1, image: "https://bootdey.com/img/Content/avatar/avatar1.png" },
     { id: 2, image: "https://bootdey.com/img/Content/avatar/avatar6.png" },
@@ -21,8 +27,6 @@ export default Producteurs = () => {
   ];
 
   const [users, setUsers] = useState(data);
-
-  showAlert = () => Alert.alert("Alert", "Button pressed ");
 
   return (
     <FlatList
@@ -41,9 +45,9 @@ export default Producteurs = () => {
               <View style={styles.buttons}>
                 <TouchableOpacity
                   style={[styles.button, styles.view]}
-                  onPress={showAlert}
+                  onPress={handleViewDetails}
                 >
-                  <Text>Détail</Text>
+                  <Text style={{ color: Colors.white }}>Détail</Text>
                 </TouchableOpacity>
               </View>
             </View>
@@ -58,6 +62,7 @@ const styles = StyleSheet.create({
   image: {
     width: 100,
     height: 100,
+    borderRadius: 50,
   },
   box: {
     padding: 20,
@@ -98,7 +103,7 @@ const styles = StyleSheet.create({
     height: 20,
   },
   view: {
-    backgroundColor: "#eee",
+    backgroundColor: Colors.orange_1,
   },
   profile: {
     backgroundColor: "#1E90FF",

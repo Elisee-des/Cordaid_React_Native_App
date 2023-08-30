@@ -8,7 +8,7 @@ import Button from "../components/Button";
 const Onboarding = ({ navigation }) => {
   return (
     <View style={{ flex: 3, backgroundColor: Colors.white }}>
-      <StatusBar barStyle="dark-content" backgroundColor={Colors.primary} />
+      <StatusBar barStyle="dark-content" backgroundColor={Colors.orange_1} />
       <View
         style={{ flex: 3, flexDirection: "column", backgroundColor: "#ddd" }}
       >

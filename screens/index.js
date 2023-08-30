@@ -8,3 +8,5 @@ export { default as SuiteProductions } from "./MainStackScreen/SuiteProductions"
 export { default as RecolteVentes } from "./MainStackScreen/RecolteVentes";
 export { default as Dashboard } from "./MainStackScreen/Dashboard";
 export { default as DetailProducteur } from "./MainStackScreen/DetailProducteur";
+export { default as ProductionsHome } from "./MainStackScreen/ProductionsHome";
+export { default as SuiteProductionHome } from "./MainStackScreen/SuiteProductionsHome";

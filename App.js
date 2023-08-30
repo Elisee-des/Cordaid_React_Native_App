@@ -6,6 +6,7 @@ import {
   DrawerItemList,
   createDrawerNavigator,
 } from "@react-navigation/drawer";
+import BottonTabNavigation from "./navigation/BottonTabNavigation";
 import {
   Splash,
   Onboarding,
@@ -13,9 +14,9 @@ import {
   Backups,
   Producteurs,
   Productions,
-  SuiteProductions,
   RecolteVentes,
   Dashboard,
+  SuiteProductions,
   DetailProducteur,
 } from "./screens";
 import { useFonts } from "expo-font";
@@ -57,11 +58,59 @@ const App = () => {
         <Stack.Screen name="Splash" component={Splash} />
         <Stack.Screen name="Onboarding" component={Onboarding} />
         <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen
+          name="DetailProducteur"
+          options={{
+            headerShown: true,
+          }}
+          component={DetailProducteur}
+        />
+        <Stack.Screen
+          name="Productions"
+          options={{
+            headerShown: true,
+          }}
+          component={Productions}
+        />
+        <Stack.Screen
+          name="SuiteProductions"
+          options={{
+            headerShown: true,
+          }}
+          component={SuiteProductions}
+        />
+
+        <Stack.Screen
+          name="RecolteVentes"
+          options={{
+            headerShown: true,
+          }}
+          component={RecolteVentes}
+        />
+        {/* <Stack.Screen
+          name="BottonTabNavigation"
+          component={BottonTabNavigation}
+        /> */}
+
         <Stack.Screen name="Main" component={MainStackScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
+
+function ProducteursStackScreen() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="Producteurs"
+        options={{
+          headerShown: false,
+        }}
+        component={Producteurs}
+      />
+    </Stack.Navigator>
+  );
+}
 
 function MainStackScreen() {
   return (
@@ -119,40 +168,7 @@ function MainStackScreen() {
           title: "Producteurs",
           drawerIcon: () => <Ionicons name="home" size={20} color="#808080" />,
         }}
-        component={Producteurs}
-      />
-
-      <Drawer.Screen name="Detail producteurs" component={DetailProducteur} />
-      <Drawer.Screen name="Production" component={Productions} />
-
-      <Drawer.Screen
-        name="Productions"
-        options={{
-          drawerLabel: "Productions",
-          title: "Productions",
-          drawerIcon: () => <Ionicons name="home" size={20} color="#808080" />,
-        }}
-        component={Productions}
-      />
-
-      <Drawer.Screen
-        name="Suite Productions"
-        options={{
-          drawerLabel: "Suite Productions",
-          title: "Suite de Productions",
-          drawerIcon: () => <Ionicons name="home" size={20} color="#808080" />,
-        }}
-        component={SuiteProductions}
-      />
-
-      <Drawer.Screen
-        name="Recoltes et Ventes"
-        options={{
-          drawerLabel: "Recoltes et Ventes",
-          title: "Recoltes et Ventes",
-          drawerIcon: () => <Ionicons name="home" size={20} color="#808080" />,
-        }}
-        component={RecolteVentes}
+        component={ProducteursStackScreen}
       />
 
       <Drawer.Screen

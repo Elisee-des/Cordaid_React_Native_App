@@ -13,7 +13,7 @@ const Login = () => {
   const navigation = useNavigation();
   return (
     <View style={{ flex: 1, backgroundColor: "#fff", flexDirection: "column" }}>
-      <StatusBar barStyle="dark-content" backgroundColor={Colors.primary} />
+      <StatusBar barStyle="dark-content" backgroundColor={Colors.orange_1} />
       <View
         style={{
           flex: 2,

@@ -2,8 +2,9 @@ import React from "react";
 import { TouchableOpacity } from "react-native";
 import { View, Text, Image, StyleSheet, ScrollView } from "react-native";
 import { Colors } from "../../constants";
+import { useNavigation } from "@react-navigation/native";
 
-const ProfileScreen = () => {
+const DetailProducteur = ({ navigation }) => {
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -62,14 +63,39 @@ const ProfileScreen = () => {
           <View style={styles.infoContainer}>
             <Text style={styles.infoLabel}>Localisation :</Text>
             <Text style={styles.infoValue}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-              ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas
-              non massa sem. Etiam finibus odio quis feugiat facilisis.
+              Lorem ipsum dolor sit amet, consectetur
             </Text>
           </View>
           <View style={styles.carRow}>
-            <TouchableOpacity style={styles.carBtn}>
-              <Text style={styles.carTitle}>Commencer une collecte</Text>
+            <TouchableOpacity
+              style={styles.carBtn}
+              onPress={() => navigation.navigate("Productions")}
+            >
+              <Text style={styles.carTitle}>
+                Commencer une collecte de productions
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          <View style={styles.carRow}>
+            <TouchableOpacity
+              style={styles.carBtn}
+              onPress={() => navigation.navigate("SuiteProductions")}
+            >
+              <Text style={styles.carTitle}>
+                Commencer une suite de collecte de productions
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          <View style={styles.carRow}>
+            <TouchableOpacity
+              style={styles.carBtn}
+              onPress={() => navigation.navigate("RecolteVentes")}
+            >
+              <Text style={styles.carTitle}>
+                Commencer collette une recolte et vente
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -111,30 +137,31 @@ const styles = StyleSheet.create({
   },
   infoContainer: {
     marginTop: 20,
+    flexDirection: "row",
   },
   infoLabel: {
     fontWeight: "bold",
   },
   infoValue: {
-    marginTop: 5,
+    marginTop: 0,
   },
   carRow: {
     paddingTop: 15,
     paddingBottom: 10,
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "center",
     alignItems: "center",
     width: -44,
   },
   carBtn: {
-    width: 200,
+    width: "100%",
     backgroundColor: Colors.orange_1,
     padding: 12,
-    borderRadius: 16,
+    borderRadius: 10,
   },
   carTitle: {
     color: Colors.white,
   },
 });
 
-export default ProfileScreen;
+export default DetailProducteur;

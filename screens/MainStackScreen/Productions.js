@@ -6,65 +6,244 @@ import {
   TextInput,
   StyleSheet,
   TouchableOpacity,
+  ScrollView,
 } from "react-native";
+import { Picker } from "@react-native-picker/picker";
 import { Colors } from "../../constants";
 
 const Productions = () => {
-  const [currentPassword, setCurrentPassword] = useState();
-  const [newPassword, setNewPassword] = useState();
-  const [repeatPassword, setRepeatPassword] = useState();
+  const [selectedValue, setSelectedValue] = useState("Saisonnière");
 
   const handleSubmit = () => {};
 
   return (
-    <View style={styles.container}>
-      <View style={styles.avatarContainer}>
-        <Image
-          style={styles.avatar}
-          source={{
-            uri: "https://www.bootdey.com/img/Content/avatar/avatar8.png",
-          }}
-        />
+    <ScrollView>
+      <View style={styles.container}>
+        <View style={styles.form}>
+          <Text style={styles.label}>Type de production</Text>
+          <Picker
+            style={{ borderColor: Colors.black, borderWidth: 1 }} // Utilisez borderWidth pour définir l'épaisseur de la bordure
+            selectedValue={selectedValue}
+            onValueChange={(itemValue, itemIndex) =>
+              setSelectedValue(itemValue)
+            }
+          >
+            <Picker.Item label="Saisonnière" value="saisonniere" />
+            <Picker.Item label="Hors sol" value="hors_sol" />
+            <Picker.Item label="Contre saison" value="contre_saison" />
+          </Picker>
+
+          <Text style={styles.label}>Bio quantité de semences</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici la quantité"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>Bio cout des semences</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici le cout"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>Bio quantité de fo</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici la quantité"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>Bio cout de fo</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici le cout"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>Bio quantité de fertinova</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici la quantité"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>Bio cout de fertinova</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici le cout"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>Bio quantité d'autres fertilisants</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici la quantité"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>Bio cout autres fertilisants</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici le cout"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>Bio quantité de pesticide bio</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici la quantité"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>Bio cout de pesticide bio</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici le cout"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>Bio quantité de farine nem</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici la quantité"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>Bio cout de farine nem</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici le cout"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>Bio quantité d'huile nem</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici la quantité"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>Bio cout d'huile nem</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici le cout"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>Bio quantité de fongicide</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici la quantité"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>Bio cout de fongicide</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici le cout"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>Bio quantité autres produits phyto</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici la quantité"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>Bio cout autres produits phyto</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici le cout"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>conv quantité d'uree</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici la quantité"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>conv cout d'uree</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici le cout"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>conv quantité npk</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici la quantité"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>conv cout npk</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici le cout"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>conv quantité autres fertilisants</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici la quantité"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>conv cout autres fertilisants</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici le cout"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>conv cout herbicide</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici le cout"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>conv cout planage sols</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici le cout"
+            secureTextEntry={true}
+          />
+
+          <Text style={styles.label}>conv cout labour sols</Text>
+          <TextInput
+            style={styles.input}
+            placeholder="Entrez ici le cout"
+            secureTextEntry={true}
+          />
+
+          <TouchableOpacity
+            style={styles.button}
+            onPress={() => handleSubmit()}
+          >
+            <Text style={styles.buttonText}>Terminer</Text>
+          </TouchableOpacity>
+        </View>
       </View>
-      <View style={styles.form}>
-        <Text style={styles.label}>Current password</Text>
-        <TextInput
-          style={styles.input}
-          placeholder="Enter your current password"
-          value={currentPassword}
-          onChangeText={setCurrentPassword}
-          secureTextEntry={true}
-        />
-        <Text style={styles.label}>New password</Text>
-        <TextInput
-          style={styles.input}
-          placeholder="Enter a new password"
-          value={newPassword}
-          onChangeText={setNewPassword}
-          secureTextEntry={true}
-        />
-        <Text style={styles.label}>Repeat new password</Text>
-        <TextInput
-          style={styles.input}
-          placeholder="Repeat your new password"
-          value={repeatPassword}
-          onChangeText={setRepeatPassword}
-          secureTextEntry={true}
-        />
-        <TouchableOpacity style={styles.button} onPress={() => handleSubmit()}>
-          <Text style={styles.buttonText}>Change password</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    // flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: Colors.white_2,
+    backgroundColor: Colors.white,
+    paddingBottom: 30,
+  },
+  select: {
+    width: "100%",
   },
   form: {
     width: "90%",
@@ -83,7 +262,7 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: 20,
-    backgroundColor: "#1E90FF",
+    backgroundColor: Colors.orange_1,
     borderRadius: 5,
     paddingVertical: 10,
     paddingHorizontal: 20,

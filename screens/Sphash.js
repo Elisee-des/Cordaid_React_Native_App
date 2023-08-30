@@ -5,7 +5,7 @@ import styles from "./styles/sphash";
 const Sphash = ({ navigation }) => {
   setTimeout(() => {
     navigation.replace("Onboarding");
-  }, 6000);
+  }, 3000);
   return (
     <View style={styles.container}>
       <Image

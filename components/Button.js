@@ -8,7 +8,7 @@ const Button = ({ on_press, btn_text }) => {
       style={{
         justifyContent: "center",
         width: "95%",
-        backgroundColor: Colors.primary,
+        backgroundColor: Colors.orange_1,
         height: 50,
         marginBottom: 30,
         borderRadius: 10,
